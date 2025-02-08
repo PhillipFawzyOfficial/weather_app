@@ -10,18 +10,18 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather App'),
-        // actions: [
-        //   IconButton(
-        //       onPressed: () {
-        //         Navigator.push(
-        //           context,
-        //           MaterialPageRoute(
-        //             builder: (context) => const SearchView(),
-        //           ),
-        //         );
-        //       },
-        //       icon: const Icon(Icons.search))
-        // ],
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SearchView(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.search))
+        ],
       ),
       body: const NoWeatherWidget(),
     );
