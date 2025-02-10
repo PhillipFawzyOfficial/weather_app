@@ -12,7 +12,7 @@ class TextFieldWidget extends StatelessWidget {
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 32, horizontal: 16),
             label: Text('Search'),
-            prefixIcon: Icon(Icons.search),
+            suffixIcon: Icon(Icons.search),
             hintText: 'Enter City Name',
             border: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.amber),
