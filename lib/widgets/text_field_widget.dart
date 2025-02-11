@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weather/models/weather_model.dart';
 import 'package:weather/services/weather_service.dart';
@@ -12,7 +13,8 @@ class TextFieldWidget extends StatelessWidget {
       child: Center(
         child: TextField(
           onSubmitted: (value) async {
-            weatherModel = await WeatherService().getWeather(cityName: value);
+            weatherModel =
+                await WeatherService(Dio()).getWeather(cityName: value);
             Navigator.pop(context);
           },
           decoration: const InputDecoration(

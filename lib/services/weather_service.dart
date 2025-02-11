@@ -1,8 +1,11 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dio/dio.dart';
+
 import 'package:weather/models/weather_model.dart';
 
 class WeatherService {
-  final Dio dio = Dio();
+  final Dio dio;
+  WeatherService(this.dio);
 
   final String baseUrl = 'http://api.weatherapi.com/v1';
   final String apiKey = '15736d145ed14d54a6f210947241201';
