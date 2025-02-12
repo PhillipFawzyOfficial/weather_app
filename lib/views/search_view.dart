@@ -8,7 +8,8 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search A City'),
+        title: const Text('Search A City',
+            style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       body: const TextFieldWidget(),
     );
