@@ -1,7 +1,6 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:weather/models/weather_model.dart';
-import 'package:weather/services/weather_service.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather/cubits/get_wheather_cubit/get_weather_cubit.dart';
 
 class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({super.key});
@@ -12,9 +11,10 @@ class TextFieldWidget extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Center(
         child: TextField(
-          onSubmitted: (value) async {
-            weatherModel =
-                await WeatherService(Dio()).getWeather(cityName: value);
+          onSubmitted: (value) {
+            BlocProvider.of<GetWeatherCubit>(context)
+                .getWeather(cityName: value);
+
             Navigator.pop(context);
           },
           decoration: const InputDecoration(
@@ -31,5 +31,3 @@ class TextFieldWidget extends StatelessWidget {
     );
   }
 }
-
-WeatherModel? weatherModel;
