@@ -4,7 +4,7 @@ import 'package:weather/models/weather_model.dart';
 class InfoWeatherWidget extends StatelessWidget {
   const InfoWeatherWidget({super.key, required this.weatherModel});
 
-  final WeatherModel weatherModel;
+  final WeatherModel? weatherModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +14,14 @@ class InfoWeatherWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            weatherModel.cityName,
+            weatherModel!.cityName,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 32,
             ),
           ),
           Text(
-            'updated at ${weatherModel.time.hour}:${weatherModel.time.minute}',
+            'updated at ${weatherModel!.time.hour}:${weatherModel!.time.hour}',
             style: const TextStyle(
               fontSize: 24,
             ),
@@ -33,10 +33,10 @@ class InfoWeatherWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.network(
-                'https:${weatherModel.image}',
+                'https:${weatherModel!.image}',
               ),
               Text(
-                '${weatherModel.temp}',
+                '${weatherModel!.temp}',
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 32,
@@ -45,13 +45,13 @@ class InfoWeatherWidget extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    'Maxtemp: ${weatherModel.maxTemp.round()}',
+                    'Maxtemp: ${weatherModel!.maxTemp.round()}',
                     style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
                   Text(
-                    'Mintemp: ${weatherModel.minTemp.round()}',
+                    'Mintemp: ${weatherModel!.minTemp.round()}',
                     style: const TextStyle(
                       fontSize: 16,
                     ),
@@ -64,7 +64,7 @@ class InfoWeatherWidget extends StatelessWidget {
             height: 32,
           ),
           Text(
-            weatherModel.weatherConsition,
+            weatherModel!.weatherConsition,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 32,

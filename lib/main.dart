@@ -16,7 +16,6 @@ class WeatherApp extends StatelessWidget {
       create: (context) => GetWeatherCubit(),
       child: MaterialApp(
         theme: ThemeData(
-          primarySwatch: Colors.amber,
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.amber,
           ),
