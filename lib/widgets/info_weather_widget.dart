@@ -21,7 +21,7 @@ class InfoWeatherWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'updated at ${weatherModel!.time}',
+            'updated at ${weatherModel!.time.hour}:${weatherModel!.time.minute}',
             style: const TextStyle(
               fontSize: 24,
             ),
@@ -45,13 +45,13 @@ class InfoWeatherWidget extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    'Maxtemp: ${weatherModel!.maxTemp}',
+                    'Maxtemp: ${weatherModel!.maxTemp.round()}',
                     style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
                   Text(
-                    'Mintemp: ${weatherModel!.minTemp}',
+                    'Mintemp: ${weatherModel!.minTemp.round()}',
                     style: const TextStyle(
                       fontSize: 16,
                     ),
