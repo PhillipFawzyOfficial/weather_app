@@ -16,7 +16,7 @@ class WeatherApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => GetWeatherCubit(),
       child: Builder(
-        builder: (context) => BlocBuilder<GetWeatherCubit, WeatherState>(
+        builder: (context) => BlocBuilder<GetWeatherCubit, GetWeatherState>(
           builder: (context, state) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,

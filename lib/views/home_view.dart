@@ -32,7 +32,7 @@ class HomeView extends StatelessWidget {
               icon: const Icon(Icons.search))
         ],
       ),
-      body: BlocBuilder<GetWeatherCubit, WeatherState>(
+      body: BlocBuilder<GetWeatherCubit, GetWeatherState>(
         builder: (context, state) {
           if (state is InitialState) {
             return const NoWeatherWidget();

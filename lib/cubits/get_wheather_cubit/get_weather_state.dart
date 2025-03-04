@@ -1,13 +1,13 @@
 import 'package:weather/models/weather_model.dart';
 
-class WeatherState {}
+class GetWeatherState {}
 
-class InitialState extends WeatherState {}
+class InitialState extends GetWeatherState {}
 
-class WeatherLoadedState extends WeatherState {
+class WeatherLoadedState extends GetWeatherState {
   final WeatherModel? weatherModel;
 
   WeatherLoadedState({required this.weatherModel});
 }
 
-class WeatherFalureState extends WeatherState {}
+class WeatherFalureState extends GetWeatherState {}
